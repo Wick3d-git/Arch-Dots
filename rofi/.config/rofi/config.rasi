@@ -1,0 +1,9 @@
+configuration {
+	show-icons: true;
+	display-drun: "󰣇 ";
+	icon-theme: "Nordzy";
+}
+
+//@theme "/home/wick3d/.local/share/rofi/themes/theme.rasi"
+
+@theme "/home/wick3d/.local/share/rofi/themes/theme.rasi"

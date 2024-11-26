@@ -1,0 +1,12 @@
+#!/bin/bash
+msgID="2345"
+mute="$(pamixer --get-mute)"
+ 
+
+# check volume
+if [ "$mute" == "true" ]; then
+	notify-send --urgency=low "Muted " -t 800 -r $msgID
+else
+	notify-send --urgency=low "Unmuted" -t 800 -r $msgID
+
+fi

@@ -1,0 +1,17 @@
+#!/bin/bash
+msgID="2345"
+volume="$(pamixer --get-volume)"
+iDIR="$HOME/Downloads/Scripts" 
+
+# check volume
+if [ "$volume" -gt "65" ]; then
+	#notify-send --urgency=low -i /home/wick3d/Downloads/Scripts/volhigh.jpg "$volume" -t 800 -r $msgID
+	notify-send --urgency=low -r $msgID "Volume: $(pamixer --get-volume)%" 
+elif [ "$volume" == "0" ]; then
+	notify-send --urgency=low -r $msgID "Volume: $(pamixer --get-volume)%"
+else
+	notify-send --urgency=low -r $msgID "Volume: $(pamixer --get-volume)%"
+fi
+
+
+
