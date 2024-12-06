@@ -48,12 +48,26 @@ setopt hist_ignore_dups
 setopt hist_save_no_dups
 setopt hist_find_no_dups
 
+export NODE_OPTIONS=--openssl-legacy-provider
+
 alias ls='eza --color=always --icons=always'
 alias fastfetch='fastfetch -c ~/.config/fastfetch/arch.jsonc --colors-block-range-start 9'
 alias c='clear'
-
-
 fastfetch
+
+comp() {
+  # Check if the file exists and is a C++ file
+  if [[ -f "$1" && "$1" =~ \.cpp$ ]]; then
+    # Extract the filename without the extension
+    filename="${1%.*}"
+
+    # Compile the C++ file
+    g++ "$1" -o "$filename" && ./"$filename"
+  else
+    echo "Error: File '$1' not found or not a .cpp file."
+  fi
+}
+
 
 eval "$(fzf --zsh)"
 
