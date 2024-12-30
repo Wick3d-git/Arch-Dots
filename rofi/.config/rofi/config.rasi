@@ -6,4 +6,4 @@ configuration {
 
 //@theme "/home/wick3d/.local/share/rofi/themes/theme.rasi"
 
-@theme "/home/wick3d/.local/share/rofi/themes/theme.rasi"
+@theme "/home/wick3d/.config/rofi/theme.rasi"
